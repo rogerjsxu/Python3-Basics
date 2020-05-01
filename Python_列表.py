@@ -7,9 +7,10 @@ Created on Thu Jan 23 10:06:30 2020
 
 
 #列表(注意各元素完整性)
+list = [] #空列表
 list1 = [2020,[1,5,6],"Python_list"]
 list2 = ["2020",[1,2,[3,4]],{"number":"3"}]
-list3 = [] #空列表
+
 
 #print (list1[1:4])
 
@@ -17,33 +18,29 @@ list3 = [] #空列表
 #for i in [list1]:
 #    print(i)
     
-#列表追加
-#list1.append("appended_element")
-#print (list1)
+#统计列表元素个数
+len(list2)  
+
+#列表元素追加
+list1.append("appended_element")
+print (list1)
 
 #列表元素删除
-#del list1[1]
-#print (list1)
+del list1[1]
+print (list1)
 
 #列表组合
-#list3 = list1 + list2
-#print (list3) 
+list3 = list1 + list2
+print (list3) 
 
 #列表重复
-#list4 = list1*2 
-#print (list4) 
+list4 = list1*2 
+print (list4) 
  
 #列表元素个数
-#len(list2)  
+len(list2)  
 
-#
-
-
-#词典遍历
-d = {"data":{"list":[{"movie_name":"movie1","movieID":123},{"movie_name":"movie2","movieID":343}]}}
-for i in d["data"]['list']:
-    print("{},{}".format(i["movie_name"],i["movieID"]))
-    
+## 列表练习（需要有些基础）
 
 # task1
 # 生成[2,4,6,8,10,12,14,16]
