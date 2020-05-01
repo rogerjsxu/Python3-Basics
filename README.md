@@ -1,2 +1,3 @@
 # Python3-Basics
-demo codes for Python beginnets
+面向Python3初学者的基础代码教学展示。  
+目前已包含有关字符串、整形、列表、循环、函数、类、回归等相关内容。
