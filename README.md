@@ -5,7 +5,7 @@
 ## 来源与致谢
 
 - 核心叙述改编自知乎 [水风](https://www.zhihu.com/question/60766946/answer/183072131) 的回答，向原作者致谢。
-- 原仓库自 2020 年起维护；本次翻新（2026）主要做了：**章节拆分**、**译技向示例**、依赖与许可证、以及可自动运行的 Notebook 整理。详见各 Notebook 首单元与 `legacy/`（若保留旧版单文件）。
+- 原仓库自 2020 年起维护；本次翻新（2026）主要做了：**章节拆分**、**译技向示例**、依赖与许可证、以及可自动运行的 Notebook 整理。2020 年合订本 `LearnPythonEasy.ipynb` 已拆入 `notebooks/`，历史单文件可在 git 历史中查看。
 
 ## 适合谁
 
@@ -49,8 +49,6 @@ jupyter lab
 
 - `examples/read_parallel.py` — 读取示例 TSV 平行句对
 - `examples/clean_segment.py` — 简单句段清洗
-
-根目录 `LearnPythonEasy.ipynb` 为**历史单文件版本**（2020 合订本），内容与拆分章节同源；**建议以 `notebooks/` 为准**。
 
 ## 译技向定位说明
 
