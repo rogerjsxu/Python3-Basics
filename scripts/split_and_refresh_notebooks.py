@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""One-off maintainer script: split legacy notebook and normalize cells for execution."""
+"""One-off maintainer script: split legacy notebook and normalize cells for execution.
+
+The original ``LearnPythonEasy.ipynb`` was removed after the 2026 split. To regenerate
+chapter notebooks from history:
+
+    git show b07107f:LearnPythonEasy.ipynb > LearnPythonEasy.ipynb
+    python3 scripts/split_and_refresh_notebooks.py
+    rm LearnPythonEasy.ipynb
+"""
 
 from __future__ import annotations
 
@@ -181,6 +189,11 @@ def write_nb(path: Path, cells: list[dict]) -> None:
 
 
 def main() -> None:
+    if not LEGACY.is_file():
+        raise SystemExit(
+            f"Missing {LEGACY}. Extract the old monolith from git history first "
+            "(see module docstring)."
+        )
     with LEGACY.open(encoding="utf-8") as f:
         legacy = json.load(f)
     all_cells = legacy["cells"]
