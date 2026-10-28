@@ -1,0 +1,32 @@
+name: notebooks
+
+on:
+  push:
+    branches: [master, main, "cursor/**"]
+  pull_request:
+
+jobs:
+  validate-and-execute:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Validate notebook JSON
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          for nb in sorted(Path("notebooks").glob("*.ipynb")):
+              json.load(nb.open(encoding="utf-8"))
+              print("ok", nb)
+          PY
+      - name: Execute notebooks
+        run: |
+          for nb in notebooks/*.ipynb; do
+            echo "Executing $nb"
+            jupyter nbconvert --to notebook --execute --inplace "$nb"
+          done
