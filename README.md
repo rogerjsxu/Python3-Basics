@@ -61,10 +61,3 @@ jupyter lab
 ## 许可
 
 [MIT License](LICENSE)
-
-## 维护者备忘（一次性设置）
-
-合并本翻新 PR 后，建议在 GitHub 网页完成：
-
-1. **默认分支**：Settings → General → Default branch → 选择 `main`（远程已提供 `main` 分支；合并后 `main` 将包含最新内容）。确认后可删除旧的 `master` 分支。
-2. **Topics**（About → Topics）：`python`, `jupyter`, `translation`, `localization`, `corpus`, `terminology`, `education`, `beginner`
