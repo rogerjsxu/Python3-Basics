@@ -1,0 +1,6 @@
+# Python 3.10+ recommended
+jupyterlab>=4.2,<5
+notebook>=7.2,<8
+ipykernel>=6.29,<7
+nbconvert>=7.16,<8
+nbformat>=5.10,<6
